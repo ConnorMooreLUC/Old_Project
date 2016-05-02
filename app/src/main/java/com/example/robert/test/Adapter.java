@@ -47,6 +47,7 @@ public class Adapter extends BaseAdapter {
         }
 
         ImageView img = (ImageView) convertView.findViewById(R.id.imageView1);
+        img.setAdjustViewBounds(true);
 
         img.setImageResource(monsters.get(position).getImg());
 

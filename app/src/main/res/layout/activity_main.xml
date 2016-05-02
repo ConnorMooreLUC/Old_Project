@@ -7,7 +7,9 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.robert.test.MainActivity">
+    android:stretchMode="none"
+    tools:context="com.example.robert.test.MainActivity"
+    >
 
     <GridView xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/gridView1"
@@ -21,6 +23,8 @@
         android:verticalSpacing="0dp"
         android:numColumns="auto_fit"
         android:columnWidth="25dp"
-        android:gravity="center"/>
+        android:gravity="center"
+        android:stretchMode="none"
+        />
 
 </RelativeLayout>
