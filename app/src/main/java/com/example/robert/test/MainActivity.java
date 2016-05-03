@@ -12,7 +12,7 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
     GridView grid_v;
-    int[] images={R.drawable.vuln,R.drawable.invuln,R.drawable.empty};
+    int[] images={R.drawable.vuln,R.drawable.invuln,R.drawable.empty,R.drawable.andriod};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,19 +22,22 @@ public class MainActivity extends AppCompatActivity {
         grid_v = (GridView) findViewById(R.id.gridView1);
         DisplayMetrics metrics = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(metrics);
-        int s_w = metrics.widthPixels/5;
-        int s_h = metrics.heightPixels/5;
+        double s_w = Math.floor((metrics.widthPixels / (metrics.density)-32)/25);
+        //int s_w = metrics.widthPixels/25;
+        double s_h = Math.floor((metrics.heightPixels / (metrics.density)-32)/25);
+        //int s_h = metrics.heightPixels/25;
 
         Adapter adapter = new Adapter(this, getMonsters(s_w,s_h));
         grid_v.setAdapter(adapter);
 
+
     }
 
-    private ArrayList<Monster> getMonsters(int hoz_size, int ver_size){
-        ArrayList<Monster> monsters = new ArrayList<Monster>();
-        int j = hoz_size*ver_size - 1;
+    private ArrayList<Monster> getMonsters(double hoz_size, double ver_size){
+        ArrayList<Monster> monsters = new ArrayList<>();
+        double j = hoz_size*ver_size;
         for(int i = 0; i<j;i++){
-            monsters.add(new Monster(images[i%3]));
+            monsters.add(new Monster(images[i%2+2]));
         }
 
         return monsters;
