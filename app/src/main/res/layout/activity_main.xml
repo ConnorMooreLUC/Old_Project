@@ -22,9 +22,9 @@
         android:horizontalSpacing="0dp"
         android:verticalSpacing="0dp"
         android:numColumns="auto_fit"
-        android:columnWidth="25dp"
+        android:columnWidth="60dp"
         android:gravity="center"
-        android:stretchMode="none"
+        android:stretchMode="columnWidth"
         android:isScrollContainer="false"
         />
 

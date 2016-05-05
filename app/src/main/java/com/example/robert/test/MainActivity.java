@@ -22,14 +22,13 @@ public class MainActivity extends AppCompatActivity {
         grid_v = (GridView) findViewById(R.id.gridView1);
         DisplayMetrics metrics = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(metrics);
-        double s_w = Math.floor((metrics.widthPixels / (metrics.density)-32)/25);
+        double s_w = Math.floor((metrics.widthPixels / (metrics.density)-32)/60);
         //int s_w = metrics.widthPixels/25;
-        double s_h = Math.floor((metrics.heightPixels / (metrics.density)-32)/25);
+        double s_h = Math.floor((metrics.heightPixels / (metrics.density)-32)/60)-2;
         //int s_h = metrics.heightPixels/25;
 
         Adapter adapter = new Adapter(this, getMonsters(s_w,s_h));
         grid_v.setAdapter(adapter);
-
 
     }
 
