@@ -22,6 +22,13 @@ public class Adapter extends BaseAdapter {
         this.monsters = monsters;
     }
 
+    public void changeMonsters(Integer pos, int i1, int i2){
+        Integer comp = this.monsters.get(pos).getImg();
+        if (comp.equals(i2)) {
+            this.monsters.set(pos, new Monster(i1));
+        }
+    }
+
     @Override
     public int getCount() {
         return monsters.size();
