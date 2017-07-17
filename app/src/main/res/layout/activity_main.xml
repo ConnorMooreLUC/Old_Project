@@ -27,7 +27,18 @@
         android:stretchMode="columnWidth"
         android:isScrollContainer="false"
         />
-
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_centerHorizontal="true">
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Restart"
+        android:id="@+id/Restart_button"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -35,5 +46,6 @@
         android:id="@+id/Start_button"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
+</LinearLayout>
 
 </RelativeLayout>
